@@ -1,0 +1,9 @@
+pex_binary(
+    output_path="src_app/app.zip",
+    dependencies=[
+        "src/function_a:lib",
+        "src/function_a:resources",
+        "src/function_b:lib",
+        "src/function_b:resources",
+    ],
+)

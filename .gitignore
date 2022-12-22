@@ -1,0 +1,5 @@
+.pids
+.pants.d
+dist
+.DS_Store
+.idea

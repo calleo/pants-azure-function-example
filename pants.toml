@@ -1,0 +1,21 @@
+[GLOBAL]
+pants_version = "2.14.0"
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.docformatter",
+  "pants.backend.experimental.python.lint.autoflake",
+  "pants.backend.experimental.python.lint.pyupgrade"
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[python]
+tailor_pex_binary_targets = false
+enable_resolves = true
+# We use Python 3.9 because it's the most recent version supported by Azure Functions
+interpreter_constraints = ["CPython==3.9.*"]
